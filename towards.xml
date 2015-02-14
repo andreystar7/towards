@@ -1,145 +1,111 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="428" inline="false" x="490" y="313">
+  <block type="controls_whileUntil" id="257" inline="false" x="607" y="472">
     <field name="MODE">WHILE</field>
     <value name="NUMBER">
-      <block type="logic_compare" id="441" inline="true">
-        <field name="OP">EQ</field>
-        <value name="A">
-          <block type="math_number" id="454">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <value name="B">
-          <block type="math_number" id="455">
-            <field name="NUM">1</field>
-          </block>
-        </value>
+      <block type="sensor_object" id="274">
+        <field name="OBJECT">RIGHTFRONT</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_setmotors" id="366" inline="true">
-        <value name="BOTHMOVLEFT">
-          <block type="math_number" id="383">
-            <field name="NUM">1500</field>
-          </block>
-        </value>
-        <value name="BOTHMOVRIGHT">
-          <block type="math_number" id="384">
+      <block type="movement_rightmotor" id="154" inline="true">
+        <value name="MOVRIGHT">
+          <block type="math_number" id="164">
             <field name="NUM">1500</field>
           </block>
         </value>
         <next>
-          <block type="controls_whileUntil" id="257" inline="false">
-            <field name="MODE">WHILE</field>
-            <value name="NUMBER">
-              <block type="sensor_object" id="274">
-                <field name="OBJECT">RIGHTFRONT</field>
+          <block type="movement_leftmotor" id="466" inline="true">
+            <value name="MOVLEFT">
+              <block type="math_number" id="473">
+                <field name="NUM">0</field>
               </block>
             </value>
-            <statement name="DO">
-              <block type="movement_rightmotor" id="154" inline="true">
-                <value name="MOVRIGHT">
-                  <block type="math_number" id="164">
-                    <field name="NUM">1500</field>
+            <next>
+              <block type="led_select" id="319" inline="true">
+                <field name="ACTION">FLASH</field>
+                <value name="LED">
+                  <block type="math_number" id="320">
+                    <field name="NUM">0</field>
                   </block>
                 </value>
                 <next>
-                  <block type="movement_leftmotor" id="466" inline="true">
-                    <value name="MOVLEFT">
-                      <block type="math_number" id="473">
-                        <field name="NUM">0</field>
+                  <block type="led_select" id="317" inline="true">
+                    <field name="ACTION">FLASH</field>
+                    <value name="LED">
+                      <block type="math_number" id="318">
+                        <field name="NUM">1</field>
                       </block>
                     </value>
                     <next>
-                      <block type="led_select" id="319" inline="true">
+                      <block type="led_select" id="315" inline="true">
                         <field name="ACTION">FLASH</field>
                         <value name="LED">
-                          <block type="math_number" id="320">
-                            <field name="NUM">0</field>
+                          <block type="math_number" id="316">
+                            <field name="NUM">2</field>
                           </block>
                         </value>
                         <next>
-                          <block type="led_select" id="317" inline="true">
+                          <block type="led_select" id="313" inline="true">
                             <field name="ACTION">FLASH</field>
                             <value name="LED">
-                              <block type="math_number" id="318">
-                                <field name="NUM">1</field>
+                              <block type="math_number" id="314">
+                                <field name="NUM">3</field>
                               </block>
                             </value>
                             <next>
-                              <block type="led_select" id="315" inline="true">
+                              <block type="led_select" id="311" inline="true">
                                 <field name="ACTION">FLASH</field>
                                 <value name="LED">
-                                  <block type="math_number" id="316">
-                                    <field name="NUM">2</field>
+                                  <block type="math_number" id="312">
+                                    <field name="NUM">4</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="led_select" id="313" inline="true">
+                                  <block type="led_select" id="309" inline="true">
                                     <field name="ACTION">FLASH</field>
                                     <value name="LED">
-                                      <block type="math_number" id="314">
-                                        <field name="NUM">3</field>
+                                      <block type="math_number" id="310">
+                                        <field name="NUM">5</field>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="led_select" id="311" inline="true">
-                                        <field name="ACTION">FLASH</field>
-                                        <value name="LED">
-                                          <block type="math_number" id="312">
-                                            <field name="NUM">4</field>
+                                      <block type="oled_setcursor" id="503" inline="true">
+                                        <value name="STARTX">
+                                          <block type="math_number" id="504">
+                                            <field name="NUM">25</field>
+                                          </block>
+                                        </value>
+                                        <value name="STARTY">
+                                          <block type="math_number" id="505">
+                                            <field name="NUM">25</field>
                                           </block>
                                         </value>
                                         <next>
-                                          <block type="led_select" id="309" inline="true">
-                                            <field name="ACTION">FLASH</field>
-                                            <value name="LED">
-                                              <block type="math_number" id="310">
-                                                <field name="NUM">5</field>
-                                              </block>
-                                            </value>
+                                          <block type="oled_cleardisplay" id="329">
                                             <next>
-                                              <block type="oled_setcursor" id="503" inline="true">
-                                                <value name="STARTX">
-                                                  <block type="math_number" id="504">
-                                                    <field name="NUM">25</field>
-                                                  </block>
-                                                </value>
-                                                <value name="STARTY">
-                                                  <block type="math_number" id="505">
-                                                    <field name="NUM">25</field>
-                                                  </block>
-                                                </value>
+                                              <block type="oled_color" id="292">
+                                                <field name="OBJECT">BLACK</field>
                                                 <next>
-                                                  <block type="oled_cleardisplay" id="329">
+                                                  <block type="oled_drawtext" id="346">
+                                                    <field name="TEXT">INITIATING</field>
                                                     <next>
-                                                      <block type="oled_color" id="292">
-                                                        <field name="OBJECT">BLACK</field>
+                                                      <block type="oled_setcursor" id="283" inline="true">
+                                                        <value name="STARTX">
+                                                          <block type="math_number" id="336">
+                                                            <field name="NUM">50</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="STARTY">
+                                                          <block type="math_number" id="337">
+                                                            <field name="NUM">50</field>
+                                                          </block>
+                                                        </value>
                                                         <next>
-                                                          <block type="oled_drawtext" id="346">
-                                                            <field name="TEXT">INITIATING</field>
+                                                          <block type="oled_color" id="511">
+                                                            <field name="OBJECT">BLACK</field>
                                                             <next>
-                                                              <block type="oled_setcursor" id="283" inline="true">
-                                                                <value name="STARTX">
-                                                                  <block type="math_number" id="336">
-                                                                    <field name="NUM">50</field>
-                                                                  </block>
-                                                                </value>
-                                                                <value name="STARTY">
-                                                                  <block type="math_number" id="337">
-                                                                    <field name="NUM">50</field>
-                                                                  </block>
-                                                                </value>
-                                                                <next>
-                                                                  <block type="oled_color" id="511">
-                                                                    <field name="OBJECT">BLACK</field>
-                                                                    <next>
-                                                                      <block type="oled_drawtext" id="506">
-                                                                        <field name="TEXT">AVOID</field>
-                                                                      </block>
-                                                                    </next>
-                                                                  </block>
-                                                                </next>
+                                                              <block type="oled_drawtext" id="506">
+                                                                <field name="TEXT">AVOID</field>
                                                               </block>
                                                             </next>
                                                           </block>
@@ -165,7 +131,7 @@
                   </block>
                 </next>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
