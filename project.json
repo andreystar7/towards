@@ -1,0 +1,10 @@
+{
+    "name": "towards",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "towards.xml",
+    "author": "andreystar7",
+    "minimum_firmware_version": 42
+}
