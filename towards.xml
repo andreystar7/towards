@@ -32,8 +32,18 @@
           <block type="controls_whileUntil" id="257" inline="false">
             <field name="MODE">WHILE</field>
             <value name="NUMBER">
-              <block type="sensor_object" id="274">
-                <field name="OBJECT">RIGHTFRONT</field>
+              <block type="logic_operation" id="495" inline="true">
+                <field name="OP">LOR</field>
+                <value name="A">
+                  <block type="sensor_object" id="274">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="sensor_object" id="502">
+                    <field name="OBJECT">RIGHTSIDE</field>
+                  </block>
+                </value>
               </block>
             </value>
             <statement name="DO">
@@ -99,25 +109,49 @@
                                               </block>
                                             </value>
                                             <next>
-                                              <block type="oled_cleardisplay" id="329">
+                                              <block type="oled_setcursor" id="503" inline="true">
+                                                <value name="STARTX">
+                                                  <block type="math_number" id="504">
+                                                    <field name="NUM">25</field>
+                                                  </block>
+                                                </value>
+                                                <value name="STARTY">
+                                                  <block type="math_number" id="505">
+                                                    <field name="NUM">25</field>
+                                                  </block>
+                                                </value>
                                                 <next>
-                                                  <block type="oled_setcursor" id="283" inline="true">
-                                                    <value name="STARTX">
-                                                      <block type="math_number" id="336">
-                                                        <field name="NUM">50</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="STARTY">
-                                                      <block type="math_number" id="337">
-                                                        <field name="NUM">50</field>
-                                                      </block>
-                                                    </value>
+                                                  <block type="oled_cleardisplay" id="329">
                                                     <next>
                                                       <block type="oled_color" id="292">
                                                         <field name="OBJECT">BLACK</field>
                                                         <next>
                                                           <block type="oled_drawtext" id="346">
-                                                            <field name="TEXT">INITIATING AVOID</field>
+                                                            <field name="TEXT">INITIATING</field>
+                                                            <next>
+                                                              <block type="oled_setcursor" id="283" inline="true">
+                                                                <value name="STARTX">
+                                                                  <block type="math_number" id="336">
+                                                                    <field name="NUM">50</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="STARTY">
+                                                                  <block type="math_number" id="337">
+                                                                    <field name="NUM">50</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="oled_color" id="511">
+                                                                    <field name="OBJECT">BLACK</field>
+                                                                    <next>
+                                                                      <block type="oled_drawtext" id="506">
+                                                                        <field name="TEXT">AVOID</field>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
                                                           </block>
                                                         </next>
                                                       </block>
